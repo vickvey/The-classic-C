@@ -33,30 +33,26 @@ Before using this program, ensure you have the following prerequisites:
 
    ```bash
    gcc main.c array.c -o array_program
-Run the compiled executable:
+3. Run the compiled executable:
+    ```bash
+    ./array_program
+4. Follow the on-screen instructions to interact with the fixed array.
 
-bash
-Copy code
-./array_program
-Follow the on-screen instructions to interact with the fixed array.
+## Commands
 
-Commands
-View Current Elements (1): Displays the current elements in the array.
+1. Displays the current elements in the array.
 
-Insert Element (2): Allows you to insert an element into the array at a specified position.
+2. Allows you to insert an element into the array at a specified position.
+ 
+3. Allows you to delete an element from the array at a specified position.
+ 
+4. Sorts the array using the bubble sort algorithm.
+ 
+5. Searches for an element in the array and returns its index if found.
 
-Delete Element (3): Allows you to delete an element from the array at a specified position.
+And, for exiting the program press (0).
 
-Sort Array (4): Sorts the array using the bubble sort algorithm.
-
-Search Element (5): Searches for an element in the array and returns its index if found.
-
-Exit (0): Exits the program.
-
-License
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-vbnet
-Copy code
-
-You can create a `README.md` file in your project's repository and paste the above content into it. Make sure to adjust the content as needed and include any additional information specific to your project.
+## License
+This project is under MIT LICENSE. 
+This project is made by GITHUB USER @vickvey.
+[vickvey](https://github.com/vickvey)
