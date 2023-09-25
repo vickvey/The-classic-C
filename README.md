@@ -12,4 +12,4 @@ Go inside the file and click this link for more details : [click here]()
 ## 3. Matrices-assignment
 Here i have implemented a simple Matrices assignment by using file handling and other
 C concepts.
-Go inside the file and click this link for more details : [click here]()
+Go inside the file and click this link for more details : [click here](https://github.com/vickvey/The-classic-C/blob/main/Matrices-assignment/README.md)
