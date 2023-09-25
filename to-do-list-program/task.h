@@ -25,11 +25,11 @@ struct List {
     int length;
 };
 
-Node* newNode(Task *task);
+Node* newNode(const Task *task);
 
-int addTask(Task *task, List *list);
+int addTask(const Task *task, List *list);
 int remTask(int taskID, List *list);
-Task* getTask(List *list);
+Task* getTask(int taskId, List *list);
 int destroyList(List *list);
 
 #endif

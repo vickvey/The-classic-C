@@ -47,6 +47,39 @@ int loadData (List *list, const char *filename) {
     if(list == NULL || filename == NULL) {
         return ERROR_FAILED_TO_ALLOCATE_MEMORY;
     }  
-    
-    
+    // opening the file from where data needs to be read from
+    FILE *file = fopen(filename, "rb");
+    if(file == NULL) {
+        return ERROR_FAILED_TO_OPEN_FILE;
+    }
+    // clear the existing list 
+    while(list->head != NULL) {
+        Node *temp = list->head;
+        list->head = list->head->next;
+        free(temp);
+    } list->length = 0;
+
+    // reading data from file 
+    Task task;
+    size_t bytesRead;
+    while((bytesRead == fread(&task, sizeof(task), 1, file)) == 1) {
+        // create a node and add it to the list
+        Node *newnode = newNode(&task);
+        if(newnode == NULL) {
+            return ERROR_FAILED_TO_ALLOCATE_MEMORY;
+        }
+
+        // add the node to list
+        if(addTask(&task, list) != TASK_ADDED_SUCCESS) {
+            return ERROR_ADDING_TASK_INTO_THE_LIST;
+        }
+    }
+    // closing the file 
+    fclose(file);
+
+    // check for errors during reading 
+    if(bytesRead != 0) {
+        return ERROR_READING_FROM_FILE;
+    }
+    return SUCCESS;
 }
